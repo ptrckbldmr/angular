@@ -18,8 +18,8 @@ export class UserComponent {
   //   return 'assets/users/' + this.selectedUser.avatar
   // }
 
-  @Input() avatar!: string;
-  @Input() name!: string;
+  @Input({required: true}) avatar!: string;
+  @Input({required: true}) name!: string;
 
   get imagePath() {
     return 'assets/users/' + this.avatar
